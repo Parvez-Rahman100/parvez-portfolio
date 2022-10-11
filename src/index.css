@@ -26,10 +26,11 @@ ul {
 }
 
 /* Button  */
-.btn-three {
+.btn {
   color: #FFF;
   transition: all 0.5s;
   position: relative;
+  padding: 20px 50px;
 }
 
 .btn::before {
