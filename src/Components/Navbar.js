@@ -6,10 +6,21 @@ import './Navbar.css';
 const Navbar = () => {
 
     const [cliked, setClicked] = useState(false)
+    const [color, setColor] = useState(false)
     const handleClicked = () => setClicked(!cliked)
+    const changeColor = () => {
+        if (window.scrollY >= 100) {
+            setColor(true)
+        }
+        else {
+            setColor(false)
+        }
+    }
+
+    window.addEventListener('scroll', changeColor);
 
     return (
-        <header className='header'>
+        <header className={color ? 'header header-bg' : 'header'}>
             <Link to='/'>
                 <h1>Parvez</h1>
             </Link>
