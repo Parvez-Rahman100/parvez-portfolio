@@ -28,9 +28,9 @@ const Footer = () => {
                     <h4>This is Parvez Miah</h4>
                     <p>I am a frontend developer. I am looking forward to join job as junior web developer.</p>
                     <div className='social'>
-                        <FaFacebook size={30} style={{ color: 'white', marginRight: '1rem' }} />
-                        <FaTwitter size={30} style={{ color: 'white', marginRight: '1rem' }} />
-                        <FaLinkedin size={30} style={{ color: 'white', marginRight: '1rem' }} />
+                        <a href='https://www.facebook.com/parvez.rahman.144' target='_blank' rel="noreferrer"><FaFacebook size={30} style={{ color: 'white', marginRight: '1rem' }} /></a>
+                        <a href='https://twitter.com/' target='_blank' rel='noreferrer'><FaTwitter size={30} style={{ color: 'white', marginRight: '1rem' }} /></a>
+                        <a href='https://www.linkedin.com/in/parvez-miah-945910229/' target='_blank' rel='noreferrer'><FaLinkedin size={30} style={{ color: 'white', marginRight: '1rem' }} /></a>
                     </div>
                 </div>
             </div>

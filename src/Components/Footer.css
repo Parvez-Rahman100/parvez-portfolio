@@ -16,12 +16,14 @@
     height: 100%;
     max-width: 100%;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     padding: 1rem;
 }
 
 .location {
     display: flex;
+    align-items: center;
     margin-bottom: 0.8rem;
 
 }
