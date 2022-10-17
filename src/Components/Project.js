@@ -1,30 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import ProjectsCard from './ProjectsCard';
-import url from '../../public/ProjectsData.json'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 
-
-
-const Project = () => {
-    const [project, setProject] = useState([]);
-    console.log(project);
-    useEffect(() => {
-
-        fetch(url)
-            .then(res => res.json())
-            .then(data => setProject(data))
-    }, [])
+const Project = ({ project }) => {
+    const { img, title, desc, live, ClientCode } = project;
 
     return (
-        <div className='work-container'>
-            <h1 className='projects-heading'>Projects</h1>
-            <div className='projects-container'>
-                {
-                    project.map(pro => <ProjectsCard
-                        key={pro.id}
-                        pro={pro}
-                    />)
-                }
+        <div className='projects-card'>
+            <img src={img} alt='projects screenshots' />
+            <h2 className='project-title'>{title}</h2>
+
+            <div className='projects-details'>
+                <p>{desc}</p>
+                <div className='projects-btn'>
+                    <NavLink to={live} className='btn'>View</NavLink>
+                    <NavLink to={ClientCode} className='btn'>Source</NavLink>
+                </div>
             </div>
         </div>
     );
