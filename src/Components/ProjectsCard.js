@@ -1,25 +1,23 @@
 import React from 'react';
-import './ProjectsCard.css';
-import url from '../ProjectsData.json';
-import Project from './Project';
+import { NavLink } from 'react-router-dom';
 
 
-const ProjectsCard = () => {
+const ProjectsCard = ({ project }) => {
+    const { img, title, desc, live, ClientCode } = project;
 
     return (
+        <div className='projects-card'>
+            <img src={img} alt='projects screenshots' />
+            <h2 className='project-title'>{title}</h2>
 
-        <div className='work-container'>
-            <h1 className='projects-heading'>Projects</h1>
-            <div className='projects-container'>
-                {
-                    url.map(project => <Project
-                        key={project.id}
-                        project={project}
-                    ></Project>)
-                }
+            <div className='projects-details'>
+                <p>{desc}</p>
+                <div className='projects-btn'>
+                    <NavLink to={live} className='btn'>View</NavLink>
+                    <NavLink to={ClientCode} className='btn'>Source</NavLink>
+                </div>
             </div>
         </div>
-
     );
 };
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import AboutContent from '../Components/AboutContent';
 
 const About = () => {
     return (
@@ -9,6 +10,7 @@ const About = () => {
                     <p>I am a friendly frontend web developer</p>
                 </div>
             </div>
+            <AboutContent />
         </div>
     );
 };

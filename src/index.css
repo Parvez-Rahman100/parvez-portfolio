@@ -33,6 +33,7 @@ ul {
   padding: 20px 50px;
   font-weight: 800;
   font-size: large;
+  cursor: pointer;
 }
 
 .btn::before {

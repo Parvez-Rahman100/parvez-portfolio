@@ -1,5 +1,6 @@
 import React from 'react';
-import ProjectsCard from '../Components/ProjectsCard';
+import Project from '../Components/Project';
+
 
 
 const Projects = () => {
@@ -12,7 +13,7 @@ const Projects = () => {
                     <p>Some of my recent works</p>
                 </div>
             </div>
-            <ProjectsCard />
+            <Project />
         </div>
     );
 };
