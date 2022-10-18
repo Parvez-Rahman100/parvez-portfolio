@@ -10,7 +10,7 @@ const HeroSection = () => {
                 <img className='hero-bg' src={parvez} alt='heroBG' />
             </div>
             <div className=' content'>
-                <h1>Hi, I am Frontend Developer</h1>
+                <h1>I am a <span className='typewriter'>Front-end Web Developer .</span> </h1>
                 <div>
                     <Link to='/projects' className='btn'>Projects</Link>
                     <Link to='/contact' className='btn'>Contact</Link>

@@ -57,3 +57,38 @@
         padding: 0.6rem 0 1.5rem;
     }
 }
+
+
+
+
+
+
+
+
+.typewriter {
+    position: relative;
+}
+
+.typewriter::after {
+    content: '_';
+    position: absolute;
+    color: burlywood;
+    right: 0;
+    background-color: transparent;
+    opacity: 0.9;
+    width: 100%;
+    animation: typing 3s steps(25) alternate infinite,
+        line 1s infinite;
+}
+
+@keyframes typing {
+    to {
+        width: 0%;
+    }
+}
+
+@keyframes line {
+    50% {
+        color: transparent;
+    }
+}

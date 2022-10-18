@@ -1,11 +1,13 @@
 import React from 'react';
 import './ProjectsCard.css';
-import url from '../ProjectsData.json';
 import ProjectsCard from './ProjectsCard';
+import useProjects from '../hooks/useProjects';
 
 
 
 const Project = () => {
+
+    const [projects] = useProjects()
 
     return (
 
@@ -13,7 +15,7 @@ const Project = () => {
             <h1 className='projects-heading'>Projects</h1>
             <div className='projects-container'>
                 {
-                    url.map(project => <ProjectsCard
+                    projects.map(project => <ProjectsCard
                         key={project.id}
                         project={project}
                     ></ProjectsCard>)

@@ -1,9 +1,13 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 const ProjectsCard = ({ project }) => {
-    const { img, title, desc, live, ClientCode } = project;
+    const { img, title, desc, _id } = project;
+    const navigate = useNavigate()
+    const handleDetails = (_id) => {
+        navigate(`/projects/${_id}`)
+    }
 
     return (
         <div className='projects-card'>
@@ -13,8 +17,7 @@ const ProjectsCard = ({ project }) => {
             <div className='projects-details'>
                 <p>{desc}</p>
                 <div className='projects-btn'>
-                    <NavLink to={live} className='btn'>View</NavLink>
-                    <NavLink to={ClientCode} className='btn'>Source</NavLink>
+                    <button onClick={() => handleDetails(_id)} className='btn'>Details</button>
                 </div>
             </div>
         </div>
