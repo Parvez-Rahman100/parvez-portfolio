@@ -14,7 +14,7 @@ const ContactForm = () => {
                 <input type='text' name='subject'></input>
                 <label>Message</label>
                 <textarea rows='6' placeholder='Type your message here' name='message' required />
-                <button type='submit' class="button-57"><span class="text">Submit</span><span>Send</span></button>
+                <button type='submit' class="button-57"><span class="text">Submit</span><span>Submit</span></button>
             </form>
 
         </div>

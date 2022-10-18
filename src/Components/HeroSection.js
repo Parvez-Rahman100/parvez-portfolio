@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import heroBG from '../Assests/hero-bg.jpg';
+import parvez from '../Assests/parvez.jpg';
 import './HeroSection.css';
 
 const HeroSection = () => {
     return (
         <div className='hero'>
             <div className=' mask'>
-                <img className='hero-bg' src={heroBG} alt='heroBG' />
+                <img className='hero-bg' src={parvez} alt='heroBG' />
             </div>
             <div className=' content'>
                 <h1>Hi, I am Frontend Developer</h1>
