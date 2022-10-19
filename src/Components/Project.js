@@ -2,6 +2,7 @@ import React from 'react';
 import './ProjectsCard.css';
 import ProjectsCard from './ProjectsCard';
 import useProjects from '../hooks/useProjects';
+import Loading from './Loading';
 
 
 
@@ -13,14 +14,20 @@ const Project = () => {
 
         <div className='work-container'>
             <h1 className='projects-heading'>Projects</h1>
-            <div className='projects-container'>
-                {
-                    projects.map(project => <ProjectsCard
-                        key={project.id}
-                        project={project}
-                    ></ProjectsCard>)
-                }
-            </div>
+            {
+                projects?.length ? (
+                    <div className='projects-container'>
+                        {
+                            projects.map(project => <ProjectsCard
+                                key={project.id}
+                                project={project}
+                            ></ProjectsCard>)
+                        }
+                    </div>
+                ) : (
+                    <Loading />
+                )
+            }
         </div>
 
     );

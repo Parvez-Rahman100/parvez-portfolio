@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import './ProjectDetails.css';
 
 
 
@@ -12,7 +13,7 @@ const ProjectDetails = () => {
     const { id } = useParams()
 
     useEffect(() => {
-        const url = `http://localhost:5000/projects/${id}`;
+        const url = `https://parvez-portfolio2.herokuapp.com/projects/${id}`;
 
         fetch(url)
             .then(res => res.json())
@@ -20,14 +21,20 @@ const ProjectDetails = () => {
     }, [id])
 
     return (
-        <div className='projects-card'>
-            <img src={img} alt='projects screenshots' />
-            <h2 className='project-title'>{title}</h2>
+        <div className='pro-detls'>
+            <div className='heros'>
 
-            <div className='projects-details'>
-                <p>{desc}</p>
-                <div className='projects-btn'>
-                    <Link to='/' className='btn'>Back to Home</Link>
+                <div className='heading'>
+                    <h1>{title}</h1>
+                </div>
+            </div>
+
+            <div className='pro-card'>
+                <div className='pro-imgs'>
+                    <img src={img} alt='project screenshots' />
+                </div>
+                <div className='pro-info'>
+                    <p>{desc}</p>
                 </div>
             </div>
         </div>

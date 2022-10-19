@@ -4,7 +4,7 @@ const useProjects = () => {
 
     const [projects, setProjects] = useState([]);
     useEffect(() => {
-        const url = 'http://localhost:5000/projects';
+        const url = 'https://parvez-portfolio2.herokuapp.com/projects';
         fetch(url)
             .then(res => res.json())
             .then(data => setProjects(data))
