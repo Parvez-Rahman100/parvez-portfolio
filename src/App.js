@@ -7,6 +7,7 @@ import Contact from './Routes/Contact';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import ProjectDetails from './Routes/ProjectDetails';
+import NotFound from './Routes/NotFound';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path='/projects/:id' element={<ProjectDetails></ProjectDetails>}></Route>
         <Route path='/about' element={<About />}></Route>
         <Route path='/contact' element={<Contact />}></Route>
+        <Route path='*' element={<NotFound />}></Route>
       </Routes>
       <Footer />
     </div>

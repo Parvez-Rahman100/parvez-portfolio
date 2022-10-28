@@ -22,7 +22,7 @@ const Navbar = () => {
     return (
         <header className={color ? 'header header-bg' : 'header'}>
             <Link to='/'>
-                <h1>Parvez</h1>
+                <h1 className='myName'>Parvez</h1>
             </Link>
             <ul className={cliked ? 'nav-menu active' : 'nav-menu'}>
                 <li>

@@ -10,6 +10,13 @@
 
 }
 
+.myName {
+    font-weight: 900;
+    color: wheat;
+    letter-spacing: 7px;
+    margin-left: 1.2rem;
+}
+
 .header-bg {
     background-color: rgba(0, 0, 0, 0.5);
     transition: 1s;

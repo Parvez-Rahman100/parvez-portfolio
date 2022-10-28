@@ -69,6 +69,10 @@
     align-items: center;
 }
 
+.text-not-found {
+    color: white;
+}
+
 @media screen and (max-width:640px) {
     .heros h1 {
         font-size: 1.5rem;

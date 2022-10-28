@@ -53,7 +53,7 @@ const ProjectDetails = () => {
                     serverCode?.length ? (
                         <a className='btn' href={serverCode} target='_blank' rel='noreferrer'>Server Code</a>
                     ) : (
-                        'This web site has no server code'
+                        <p className='text-not-found'>This web site has no server code</p>
                     )
                 }
             </div>
