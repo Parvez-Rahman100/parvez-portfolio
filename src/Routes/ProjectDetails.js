@@ -26,7 +26,7 @@ const ProjectDetails = () => {
             <div className='heros'>
 
                 <div className='heading'>
-                    <h1>{title}</h1>
+                    <h1 className='p-title'>{title}</h1>
                 </div>
 
             </div>

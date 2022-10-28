@@ -33,7 +33,7 @@
 .heros {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    height: 15vh;
+    height: 20vh;
     position: relative;
 }
 
@@ -69,6 +69,11 @@
     align-items: center;
 }
 
+.p-title {
+    margin-top: 5rem;
+
+}
+
 .text-not-found {
     color: white;
 }
@@ -81,9 +86,14 @@
 
     .projects-imgs {
         max-width: 1140px;
-        margin: auto;
+        margin: 50px auto;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .projects-imgs img {
+        width: 80%;
+        margin: auto;
     }
 
     .links {
@@ -100,7 +110,7 @@
     }
 }
 
-@media screen and (max-width:780px) {
+@media screen and (min-width:780px) {
     .projects-imgs {
         max-width: 1140px;
         margin: auto;

@@ -13,7 +13,8 @@
 .myName {
     font-weight: 900;
     color: wheat;
-    letter-spacing: 5px;
+    letter-spacing: 7px;
+    margin-left: 1.2rem;
 }
 
 .header-bg {
