@@ -9,7 +9,8 @@ const ProjectDetails = () => {
 
 
     const [project, setProject] = useState({})
-    const { img, desc, title } = project;
+    const { img1, img2, img3, img4, img5, img6, desc, title, live, loginInfo, ClientCode, serverCode
+    } = project;
     const { id } = useParams()
 
     useEffect(() => {
@@ -27,15 +28,34 @@ const ProjectDetails = () => {
                 <div className='heading'>
                     <h1>{title}</h1>
                 </div>
+
+            </div>
+            <div className='details'>
+                <p>{desc}</p>
+                <br />
+                <p>{loginInfo}</p>
             </div>
 
-            <div className='pro-card'>
-                <div className='pro-imgs'>
-                    <img src={img} alt='project screenshots' />
-                </div>
-                <div className='pro-info'>
-                    <p>{desc}</p>
-                </div>
+            <div className='projects-container'>
+
+                <img className=" px-2 rounded-lg projectImg" src={img1} alt="" />
+                <img className=" px-2 rounded-lg projectImg" src={img2} alt="" />
+                <img className=" px-2 rounded-lg projectImg" src={img3} alt="" />
+                <img className=" px-2 rounded-lg projectImg" src={img4} alt="" />
+                <img className=" px-2 rounded-lg projectImg" src={img5} alt="" />
+                <img className=" px-2 rounded-lg projectImg" src={img6} alt="" />
+
+            </div>
+            <div className=' links'>
+                <a className='btn' href={live} target='_blank' rel='noreferrer'>Live</a>
+                <a className='btn' href={ClientCode} target='_blank' rel='noreferrer'>Client Code</a>
+                {
+                    serverCode?.length ? (
+                        <a className='btn' href={serverCode} target='_blank' rel='noreferrer'>Server Code</a>
+                    ) : (
+                        'This web site has no server code'
+                    )
+                }
             </div>
         </div>
     );
