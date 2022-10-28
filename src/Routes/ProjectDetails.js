@@ -36,7 +36,7 @@ const ProjectDetails = () => {
                 <p>{loginInfo}</p>
             </div>
 
-            <div className='projects-container'>
+            <div className='projects-imgs'>
 
                 <img className=" px-2 rounded-lg projectImg" src={img1} alt="" />
                 <img className=" px-2 rounded-lg projectImg" src={img2} alt="" />
